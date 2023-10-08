@@ -24,3 +24,14 @@ async def cmd_start_db(user_id):
     if not user:
         cur.execute("INSERT INTO accounts (tg_id) VALUES ({key})".format(key=user_id))
         db.commit()
+
+
+async def add_item(state):
+    async with state.proxy() as data:
+        cur.execute("INSERT INTO items (name, desc, price) VALUES (?, ?, ?)",
+                    (data['name'], data['desc'], data['price']))
+        db.commit()
+
+async def get_items():
+    items = cur.execute("SELECT name FROM items").fetchall()
+    return items
