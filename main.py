@@ -34,7 +34,7 @@ class NewOrder(StatesGroup):
 @dp.message_handler(commands=['start'])
 async def cmd_start(message: types.Message):
     await db.cmd_start_db(message.from_user.id)
-    await message.answer_sticker(st_s.greeting_sticker)
+    await message.answer_sticker(st_s.hi)
     if message.from_user.id in admins_list:
         await message.answer(f'Привет админ, {message.from_user.first_name}!', reply_markup=kb.main_admin)
     else:

@@ -1,1 +1,2 @@
 greeting_sticker='CAACAgIAAxkBAAIB62URx90LvAIrSM6ystcub2xoULrPAAIFAAPANk8T-WpfmoJrTXUwBA'
+hi='CAACAgIAAxkBAAIDwmUimzwaXV-wetCkO0-jls7hfSlfAAIDAAPANk8TpCnu5n3zwHgwBA'
